@@ -1,0 +1,55 @@
+# githelp
+
+# first things to do after git install
+
+# sudo apt-get install git
+# set up git
+#https://www.digitalocean.com/community/tutorials/how-to-install-git-on-ubuntu-14-04
+
+
+
+
+
+   # git config --global user.name "Your Name"
+   # git config --global user.email "youremail@domain.com"
+   
+   
+   # Add git credential helper
+   
+   
+# git config --global credential.helper 'cache --timeout=36000000000'
+# Set the cache to timeout after  1000 hour (setting is in seconds)
+
+
+#  create a repo for a new project already existing in your computer
+
+#$ git init
+#$ git add . && git commit -m "It begins."
+
+# if folders in root enter this
+git add -A && git commit -m "It begins."
+
+
+
+
+# create remote git hub repository
+# curl -u 'anupamsingh81' https://api.github.com/user/repos -d '{"name":"newexperiment"}'
+# sometimes if problem with password by cURL install certificatees and try again sudo apt-get install ca-certificates
+make directory of certificates if none
+sudo mkdir -p /etc/pki/tls/certs
+copy certificates
+sudo cp /etc/ssl/certs/ca-certificates.crt /etc/pki/tls/certs/ca-bundle.crt
+
+# Remember replace USER with your username and REPO with your repository/application name!
+git remote add origin git@github.com:anupamsingh81/newexperiment.git
+
+https://www.youtube.com/watch?v=SwK2dPFXhpU
+
+git push -u  origin master
+
+#$ git create -d "My new thing"
+#→  (creates a new project on GitHub with the name of current directory)
+# $ git push -u origin master
+#HI
+# ? what is difference between git and git -u origin master always prefer git push-u origin master
+# Also credential helper cache alwayss add at first install for 1 million seconds
